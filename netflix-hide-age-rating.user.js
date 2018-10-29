@@ -5,8 +5,8 @@
 // @description	Removes the annoying age rating fade in at Netflix.
 // @description:de Entfernt die nervige Altersfreigabe Einblendung bei Netflix.
 
-// @downloadURL	https://localhost/userscripts/netflix/netflix-hide-age-rating.user.js
-// @updateURL	https://localhost/userscripts/netflix/netflix-hide-age-rating.user.js
+// @downloadURL	https://github.com/cnleo/netflix/blob/master/netflix-hide-age-rating.user.js
+// @updateURL	https://github.com/cnleo/netflix/blob/master/netflix-hide-age-rating.user.js
 
 // @author		cnleo
 
@@ -19,7 +19,7 @@
 // @match	https://netflix.com/*
 // @match	http://netflix.com/*
 
-// @version	0.0.0-BETA.0001
+// @version	0.0.2
 
 // @run-at document-end
 
