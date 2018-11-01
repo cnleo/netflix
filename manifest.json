@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "Userscript for Netflix (https://www.netflix.com)",
+	"version": "0.0.2",
+	"description": "Removes the annoying age rating fade in at Netflix.",
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.netflix.com/*"],
+			"js": ["netflix-hide-age-rating.user.js"]
+   }
+ ]
+}
