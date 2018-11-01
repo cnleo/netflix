@@ -1,6 +1,7 @@
 // ==UserScript==
 
-// @name        Userscript for Netflix (https://www.netflix.com/)
+// @name Userscript for Netflix (https://www.netflix.com/)
+// @name:de Userscript für Netflix (https://www.netflix.com/)
 
 // @description		Removes the annoying age rating fade in at Netflix.
 // @description:de	Entfernt die nervige Altersfreigabe Einblendung bei Netflix.
@@ -24,6 +25,8 @@
 // @run-at document-end
 
 // ==/UserScript==
+
+//console.log('netflix-hide-age-rating.user.js is running.');
 
 function addStylesheetRules(rules) {
 	var styleEl = document.createElement('style');
@@ -55,24 +58,8 @@ function addStylesheetRules(rules) {
 	}
 }
 
-/* < div class = "player-view-childrens player-view-childrens-static" >
-	<
-	div class = "nfp-aspect-wrapper" >
-	<
-	div class = "nfp-aspect-container" >
-		*/
+/** HOW TO USE:
 
-//let class_to_hide = 'player-view-childrens.player-view-childrens-static';
-//let element_to_hide = document.querySelector(`div.${class_to_remove}`);
-//element_to_hide.style.display = 'none !important';
-
-addStylesheetRules([
-  ['body div.player-view-childrens',
-    ['display', 'none', true]
-  ]
-]);
-
-/*
 addStylesheetRules([
   ['h2', // Also accepts a second argument as an array of arrays instead
     ['color', 'red'],
@@ -81,4 +68,22 @@ addStylesheetRules([
   ['body div.player-view-childrens', 
     ['display', 'none', true]
   ]
-]);*/
+]);
+
+**/
+
+// < div class = "player-view-childrens player-view-childrens-static" >... <h4>AGE: n</h4>
+
+addStylesheetRules([
+	['body div.player-view-childrens', ['display', 'none', true]]
+]);
+
+/** REMEMBER: 
+
+DOMContentLoaded is not needed for Userscript and WebExtension too.
+If you want to use it, be sure to set run_at: document_start and @run-at: document-start
+document.addEventListener('DOMContentLoaded', function () {
+	// ...
+});
+
+**/
